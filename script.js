@@ -1,2 +1,38 @@
-var box = document.querySelector(".box")
-box.textContent = "<h1>Hello World</h1>"
+// var isStatus = document.querySelector("h5")
+// var addFriend =document.querySelector("#add")
+// var check = 0
+
+
+// addFriend.addEventListener("click",function(){
+//   if(check ==0){
+//   isStatus.innerHTML = "Friends";
+//   isStatus.style.color ="green";
+//   isStatus.innerHTML = "Remove Friend";
+//   check = 1
+//   }else{
+//     isStatus.innerHTML = "Stranger";
+//     isStatus.style.color ="red";
+//     addFriend.innerHTML = "Add Friend";
+//     check = 0
+//   }
+// });
+
+
+var isStatus = document.querySelector("h5");
+var btn = document.querySelector("#add"); // Change this to "#add"
+var check = 0;
+
+  btn.addEventListener("click", function () {
+  if (check == 0) {
+    isStatus.innerHTML = "Friends";
+    isStatus.style.color = "green";
+    btn.innerHTML = "Remove Friend";
+    check = 1;
+  } else {
+    isStatus.innerHTML = "Stranger";
+    isStatus.style.color = "red";
+    btn.innerHTML = "Add Friend";
+    
+    check = 0;
+  }
+});
